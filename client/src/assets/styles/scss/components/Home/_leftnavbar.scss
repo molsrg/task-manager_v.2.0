@@ -1,0 +1,259 @@
+.leftnavbar {
+  display: flex;
+  width: 456px;
+}
+
+
+/*  peopleContainer.vue */
+.people-container {
+  font-family: Raleway;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px 13px;
+  background-color: rgb(217, 217, 217);
+  row-gap: 50px;
+}
+
+.people-container_info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+
+.people-container_nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+
+.people-container_logo {
+  margin-bottom: 21px;
+}
+
+.people-container-count {
+  text-align: center;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  background-color: #15616d;
+  color: #ffecd1;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.people-container-user {
+  border-radius: 100%;
+}
+
+.people-container-add-user {
+  background-color: #bfbfbf;
+  border-radius: 100%;
+  padding: 20px 0;
+}
+
+.people-container_nav-item {
+  background-color: #bfbfbf;
+  border-radius: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+
+// taskContainer.vue
+
+.task-container {
+  font-family: Raleway;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  background-color: rgb(191, 191, 191);
+  padding: 35px 13px;
+  min-width: 340px;
+  /* overflow-y: scroll; */
+
+}
+.task-container_logo {
+  margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: 200;
+  color: rgba(0, 21, 36, 1);
+}
+
+
+.tasklist {
+  /* display: flex;
+  
+  justify-content: space-between;
+  flex-direction: column; */
+
+
+  background-color: #C4D7DA;
+  padding: 17px 19px;
+  border-radius: 10px;
+  padding-bottom: 6px;
+}
+
+.tasklist_title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasklist_title-text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+.tasklist_tasks{
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23px;
+  color: #001524;
+  gap: 11px;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 5s linear; /* Устанавливаем время и тип анимации по вашему выбору */
+}
+
+.tasklist-important-task {
+  background-color: transparent;
+  border-radius: 10px;
+  
+  display: flex;
+  justify-content: space-between;
+  /* font-family: Raleway; */
+  font-size: 20px;
+  font-weight: 500;
+
+  background-color: #DDC9C3;
+  padding: 17px 21px;
+
+}
+
+.tasklist_tasks-visible{
+  max-height: 500px; /* Выберите подходящее значение, чтобы максимально раскрывать список задач */
+  padding-bottom: 13px;
+}
+
+.tasklist_label{
+  word-wrap: break-word;
+}
+
+.tasklist-option {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px #001524 solid;
+  padding: 16px 53px;
+  font-weight: 500;
+}
+
+
+.real-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.real-checkbox:focus + .custom-checkbox {
+  box-shadow: 0px 0px 0px 1px #38577a, 0px 0px 10px #7e9bbd;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: $title-color;
+  border: 1px solid $title-color;
+  border-radius: 4px;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+
+.custom-checkbox::before {
+  content: "";
+  /* Рисуем галочку */
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-image: url("/src/assets/images/home/check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  /* Выравниваем по центру */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+
+  transition: 0.2s ease-in;
+}
+
+/*
+Активируем фейковый / декоративный чекбокс
+*/
+.real-checkbox:checked + .custom-checkbox::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+// Анимация переключения списка 
+.closed {
+  .vertical,
+  .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+  }
+  .horizontal {
+    opacity: 1;
+  }
+}
+.opened {
+  opacity: 1;
+  .vertical,
+  .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+  }
+  .horizontal {
+    opacity: 0;
+  }
+}
+.circle-plus {
+  height: 26px;
+  width: 26px;
+  font-size: 1em;
+  opacity: 0.7;
+
+  .circle {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+
+    .horizontal {
+      position: absolute;
+      background-color: black;
+      width: 50%;
+      height: 1px;
+      left: 50%;
+      margin-left: -25%;
+      top: 50%;
+    }
+
+    .vertical {
+      position: absolute;
+      background-color: black;
+      width: 1px;
+      height: 50%;
+      left: 50%;
+      top: 50%;
+      margin-top: -25%;
+    }
+  }
+}

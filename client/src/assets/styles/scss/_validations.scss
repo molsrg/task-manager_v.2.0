@@ -1,0 +1,33 @@
+.invalid-span {
+    font-family: Raleway;
+    font-size: 14px;
+    color: #FF7D00;
+}
+
+
+#app > div > div.modal > div > form > div.form-color-select > div > input { 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 18px 53px;
+    border-radius: 10px;
+    border: 1px solid #001524;
+    cursor: pointer;
+}
+// .p-colorpicker-panel .p-colorpicker-color {
+//     border-radius: 10px;
+// }
+
+.p-colorpicker-panel .p-colorpicker-hue {
+    border-radius: 5px;
+}
+
+.form-button-color {
+    display: flex;
+    justify-content: center;
+    width: 275px;
+    padding: 16px 0px;
+    border-radius: 10px;
+    border: 1px solid #001524;
+    cursor: pointer;
+}

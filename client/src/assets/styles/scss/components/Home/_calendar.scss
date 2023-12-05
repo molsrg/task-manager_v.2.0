@@ -1,0 +1,275 @@
+.calendar__component {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: start; 
+    // justify-content: start;
+}
+
+
+.select__arrow {
+    // display: flex;
+    // justify-content: space-between;
+    // max-width: 374px;
+    // align-items: start;
+
+    // margin-top: 24px;
+    // margin-left: 79px;
+
+}
+
+.select {
+    // max-width: 230px;
+    // position: fixed;
+    // width:374px; 
+    // z-index:99999999;  
+    &__header {
+        // display: flex;
+        // justify-content: space-evenly;
+        // align-items: center;
+    }
+
+    &__current {
+        // font-family: Raleway;
+        // font-size: 28px;
+        // font-weight: 700;
+        // line-height: 42px;
+    }
+
+    &__btn {
+        // margin-top: 8px;
+        // margin-left: 5px;
+        // transition: 1s;
+    }
+
+    &__btn-isActive {
+        // transition: 1s;
+        // margin-left: 5px;
+        // margin-top: 8px;
+        // transform: rotate(90deg);
+    }
+
+    &__body {
+        // display: none;
+        // background-color: white;       
+    }
+
+    &__body-show {
+        // background-color: white;
+        // z-index: 1;
+        // position: fixed;
+        // display: flex;
+        // flex-direction: column;
+        // border-radius: 20px;
+
+
+        // opacity: 0;
+        // animation: show 2.5s forwards;
+
+        // @keyframes show {
+        //     0% {opacity: 0;}
+        //     100% {opacity: 1;}
+        // }
+
+    }
+
+    &__item{
+        // padding: 0 10px;
+        // font-family: Raleway;
+        // font-size: 26px;
+        // font-weight: 500;
+        // line-height: 42px;
+        // cursor: pointer;
+        // display: inline-block; 
+    }
+
+    
+    &__item:after {
+        // display: block; /*превращаем его в блочный элемент*/
+        // content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+        // height: 3px; /*задаём высоту линии*/
+        // width: 0%; /*задаём начальную ширину элемента (линии)*/
+        // background-color: #225384; /*цвет фона элемента*/
+        // transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+    }
+
+    &__item:hover:after,
+    &__item:focus:after {
+        // width: 100%;
+    }
+
+    &__item:hover{
+    // color:#225384;
+    } 
+}
+.arrows {
+    // margin-top: 13px;
+    // max-width: 78px;
+    // display: flex;
+    // justify-content: space-between;
+    // cursor: pointer;
+    
+    &__item {
+        // margin-left: 30px;
+    }
+
+    &__item-hidden {
+        // margin-left: 30px;
+        // visibility: hidden;
+    }
+}
+
+
+.calendar {
+
+    // display: flex;
+    // flex-direction: column;
+    // place-items: center;
+
+    // margin-left: 100px;
+    // margin-top: 30px;
+    // margin-right: 63px;
+
+    &__taskboard{
+        // display: flex;
+        // overflow-y: auto;
+        // max-height: calc(100vh - 280px);
+        // width: 1340px;
+
+
+        // position: relative; /* Добавьте это */
+
+    }
+}
+.week {
+    // display: flex;
+    // justify-content: space-between;
+
+    // width: 1155px;
+    // height: 134px;
+    // margin-bottom: 41px;
+    // margin-left: 40px;
+    // // background-color: red;
+
+}
+.time {
+    // width: 38px;
+    // margin-right: 30px;
+    // margin-bottom: 65px;
+    
+//     &__container{
+//         display: flex;
+//         gap: 65px;
+//         flex-direction: column;
+        
+//     }
+
+//     &__name{
+//         font-family: Poppins;
+//         font-size: 16px;
+//         font-weight: 300;
+//         line-height: 24px;
+//     }
+
+//     &__container span {
+//             position: relative;
+            
+//     }
+
+//     &__container span:after {
+//         display: block;
+//         width:1266px;
+//         content: '';
+//         position: absolute;
+//         border-bottom: 1px solid #000;
+//         top:1%;
+//         left: 56px; 
+// }
+}
+
+.task-animation {
+    opacity: 0;
+    transform: translateY(20px); /* Сдвиг вниз на 20px, вы можете настроить его по своему усмотрению */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    width: 173px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.task {
+    // width: 173px;
+    // border-radius: 8px;
+    // display: flex;
+    // flex-direction: column;
+    // cursor: pointer;
+    // position: absolute;
+    // opacity: 1;
+    // transform: translateY(20px); /* Сдвиг вниз на 20px, вы можете настроить его по своему усмотрению */
+    // transition: opacity 0.5s ease, transform 0.5s ease;
+
+    // overflow: hidden;
+    
+    
+    &__name {
+        // font-family: Raleway;
+        // font-size: 14px;
+        // font-weight: 600;
+        // line-height: 16px;
+        // color:#0C3C44;
+        // padding: 4px 6px;
+
+        // word-wrap: break-word;
+    }
+    &__time {
+        // font-family: Raleway;
+        // font-size: 14px;
+        // font-weight: 400;
+        // line-height: 16px;
+        // color: #296B76;
+
+        // padding: 0px 6px;
+    }
+}
+
+
+.day {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // font-family: Poppins;
+    // color: #9E9E9E;
+
+    // height: 134px;
+    
+
+    &__number {
+        // font-size: 53px;
+        // font-weight: 700;
+        // cursor: pointer;
+    }
+
+    &.day:hover  {
+        // color: #0E0E0E;
+    }
+
+    &__text {
+        // font-size: 15px;
+        // font-weight: 700;
+    }
+
+    &__line {
+        // transform: rotate(90deg);
+        // margin-left: 15px;
+        // font-weight: 900;
+    }
+}
+
+// .present-day {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     font-family: Poppins;
+//     color: #0E0E0E;
+// }

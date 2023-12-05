@@ -1,0 +1,126 @@
+.form-task {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px 90px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: Raleway;
+    font-weight: 500;
+    row-gap: 20px;
+
+
+    // max-width: 480px;
+}
+
+.form-title{
+    font-size: 20px;
+}
+
+.form-input {
+    width: 100%;
+    height: 20px;
+
+    border-bottom: 1px solid #001524;
+    font-family: Raleway;
+    font-size: 16px;
+}
+
+.form-input_time-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 15px;
+}
+
+.form-input-time {
+    width: 100%;
+    height: 20px;
+    
+    border-bottom: 1px solid #001524;
+    font-family: Raleway;
+    font-size: 16px;
+}
+
+.form-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+// TaskList
+.form-color-select {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap:10px;
+}
+
+.form-button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 11px 11px;
+}
+
+.form-button {
+    display: inline-block;
+    text-align: center;
+    padding: 11px 26px;
+    border: 1px solid #001524;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.form-button_add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #001524;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .form-button {
+    background-color: rgb(220,232,233);
+}
+
+
+.form-submit {
+    width: 100%;
+    padding: 16px 53px;
+    color:#FFECD1;
+    background-color: #87979A;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    border: 1px solid #87979A;
+}
+
+.form-submit_filled {
+    background-color: #15616D;
+}
+
+.form-submit_exit{
+    width: 100%;
+    padding: 16px 53px;
+    border-radius: 10px;
+    border: 1px solid #001524;
+}
+
